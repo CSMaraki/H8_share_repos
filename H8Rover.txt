@@ -1,0 +1,77 @@
+************************************
+
+
+ローバー仕様
+
+
+************************************
+
+
+<<  グローバル変数  >>
+
+・ラインカウント
+char  lineCount
+
+・モーター値
+int  mtrFw_L
+int  mtrFw_R
+int  mtrBk_L
+int  mtrBk_R
+
+・メインのサイクルカウント
+Ushort  countSycle
+
+
+<<  変数  >>	小文字で始める
+
+・交差点フラグ
+char  interSectionFlg
+
+・センサー値
+Ushort  snsr_R
+Ushort  snsr_L
+
+Ushort  *ptSnsr_R
+Ushort  *ptSnsr_L
+
+
+・中央値
+Ushort  median_R
+Ushort  median_L
+
+
+<<  引数  >>	＿で始める
+
+・交差点フラグ
+char  _interSectionFlg
+
+・センサーポインタ
+*_ptSnsr_R
+*_ptSnsr_L
+
+
+<<  define  >>
+
+
+
+<<  関数  >>	大文字で動詞(可能なもの)から始める
+
+・FuncOffTimer
+char  交差点フラグ   引数：char  _interSectionFlg
+
+・GetSensor
+void 引数：センサー値をポインタで
+
+・CheckSensor
+char  識別色値　引数：センサー値をポインタで
+
+
+・SetUpMtr
+void  引数：なし
+
+・
+・
+・
+・
+・
+・
