@@ -1,0 +1,103 @@
+************************************
+
+
+ローバー仕様
+
+
+************************************
+
+
+<<  グローバル変数  >>
+
+・ラインカウント
+char  lineCount
+
+
+・モーター値
+int  mtrFw_L
+int  mtrFw_R
+int  mtrBk_L
+int  mtrBk_R
+
+
+
+
+<<  変数  >>	小文字で始める
+
+・交差点処理配列
+processing[]
+
+・交差点フラグ
+static char  interSectionFlg　//main内での宣言ならstaticは不要
+
+・メインのサイクルカウント
+static Ushort  countSycle
+
+・センサー値
+Ushort  snsr_R
+Ushort  snsr_L
+
+Ushort  *ptSnsr_R
+Ushort  *ptSnsr_L
+
+
+・中央値
+Ushort  median_R
+Ushort  median_L
+
+
+<<  引数  >>	＿で始める
+
+・交差点フラグ
+char  _interSectionFlg
+char  *_ptInterSectionFlg
+
+・メインのサイクルカウント
+Ushort  *_ptCountSycle
+
+・センサーポインタ
+*_ptSnsr_R
+*_ptSnsr_L
+
+・ラインカウント
+_lineCount
+
+・交差点処理配列
+_processing
+
+・センサー値
+Ushort _snsr_R
+Ushort _snsr_L
+
+<<  define  >>
+#define MTR(L,R)(Mtr_Run(L,-R,0,0))
+
+
+
+<<  関数  >>	大文字で動詞(可能なもの)から始める
+
+・FuncOffTimer
+void   引数：char  *_ptInterSectionFlg , Ushort  *_ptCountSycle
+
+・GetSensor
+void 引数：センサー値をポインタで
+
+・CheckSensor
+char  識別色値　引数：センサー値
+
+
+・SetUpMtr
+void  引数：なし
+
+・ProcessInterSection
+void  引数：char _lineCount , char  _interSectionFlg ,char _processing[]
+
+
+・SetUpProcessing
+void  引数：char _processing[]
+
+
+・
+・
+・
+・
